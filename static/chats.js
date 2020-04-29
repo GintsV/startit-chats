@@ -1,3 +1,13 @@
+var vards="";
+function lietv() {
+    var person = prompt("Lūdzu ievadi savu lietotājvārdu:", "");
+    if (person == null || person == "") {
+      vards = "Anonīms";
+    } else {
+      vards = person ;
+    }
+  }
+
 const ATJAUNOT = 5000;
 async function lasiChatu(){
     const atbilde = await fetch('chats/lasi');
@@ -25,6 +35,9 @@ function raadiChatuVienkarsi(dati){
 async function suutiZinju(){
     let zinjasElements = document.getElementById('zinja');
     let zinja = zinjasElements.value;
+    var laiks= new Date();
+    var months = ["Janvāris", "Februāris", "Marts", "Aprīlis", "Maijs", "Jūnijs", "Jūlijs", "Augusts", "Septembris", "Oktobris", "Novembris", "Decembris"];
+    zinja = laiks.getFullYear() + ".Gada " + laiks.getDate() + "." + months[laiks.getMonth()] + " " + laiks.getHours() + ":" + laiks.getMinutes() + ":" + laiks.getSeconds() + " " + vards + ": " + zinja;
 
     zinjasElements.value = "";
 

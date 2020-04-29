@@ -1,9 +1,10 @@
 from flask import Flask, render_template, json, jsonify, request
+import os
 
+cwd = os.getcwd()  # get current working dir: C:\\Users\\%USERPROFILE%\\Desktop
+print("My current working directory is: {} ".format(cwd))
 
 app = Flask('app')
-
-
 @app.route('/')
 def index_page():
   return render_template('chats.html')
