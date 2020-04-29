@@ -18,7 +18,7 @@
     fill: "white",
     fontSize: 20
 });
-	//Mainīgais, kas glabā uzvaras tekstu
+	//Mainīgais, kas glabā uzvaras tekstus
 	var uzvara;
 	//Mainīgie, kas glabā spēlētāja un dīlera uzvaras
 	var spelUzvaras=0;
